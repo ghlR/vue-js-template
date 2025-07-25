@@ -1,0 +1,49 @@
+{
+	"private": true,
+	"name": "app",
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"lint:eslint": "eslint --cache --max-warnings 0 {src,mock}/**/*.{js,vue,ts,tsx} --fix",
+		"lint:style": "stylelint \"./**/*.{css,less,vue,html}\" --fix",
+		"lint-staged": "lint-staged",
+		"prepare": "husky install"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"src/**/*.{vue,js,jsx,ts,tsx}": "eslint --fix",
+		"src/**/*.{vue,css,less,scss}": "stylelint --fix"
+	},
+	"dependencies": {
+		"vue": "^3.5.17"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.31.0",
+		"@vitejs/plugin-vue": "^6.0.0",
+		"eslint": "^9.31.0",
+		"eslint-plugin-import": "^2.32.0",
+		"eslint-plugin-vue": "^10.3.0",
+		"globals": "^16.3.0",
+		"husky": "8.0.2",
+		"jsonc-eslint-parser": "^2.4.0",
+		"lint-staged": "^16.1.2",
+		"postcss-html": "^1.8.0",
+		"postcss-less": "^6.0.0",
+		"prettier": "^3.6.2",
+		"stylelint": "^16.22.0",
+		"stylelint-config-recess-order": "^7.1.0",
+		"stylelint-config-standard": "^38.0.0",
+		"stylelint-less": "^3.0.1",
+		"stylelint-order": "^7.0.0",
+		"vite": "^7.0.4",
+		"vue-eslint-parser": "^10.2.0"
+	},
+	"main": "index.js"
+}
