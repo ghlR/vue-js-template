@@ -37,7 +37,7 @@ const bb = ref([
     <a href="https://vuejs.org/guide/scaling-up/tooling.html#ide-support" target="_blank">Vue Docs Scaling up Guide</a>.
   </p>
   <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
-  <button type="button" v-for="(item) in bb">{{ item }}
+  <button type="button" v-for="(item) in bb" :key="item">{{ item }}
 
   </button>
   <div class="test">
