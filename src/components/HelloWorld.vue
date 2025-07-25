@@ -40,6 +40,9 @@ const bb = ref([
   <button type="button" v-for="(item) in bb" :key="item">{{ item }}
 
   </button>
+  <button type="button" v-for="(item) in bb" :key="item">{{ item }}
+
+  </button>
   <div class="test">
     <div class="aaa">aaa</div>
   </div>
